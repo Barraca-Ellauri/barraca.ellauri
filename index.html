@@ -5,68 +5,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barraca Ellauri</title>
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f4f4f4; }
-    header { background:#2c2c2c; color:white; padding:20px; text-align:center; }
-    header h1 { margin:0; }
-    .container { padding:20px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-    .card { background:white; border-radius:12px; padding:15px; box-shadow:0 3px 8px rgba(0,0,0,0.1); }
-    .card img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
-    .card h3 { margin:10px 0 5px; }
-    .btn { display:block; text-align:center; background:#ff6600; color:white; padding:10px; border-radius:6px; text-decoration:none; margin-top:10px; }
-    footer { text-align:center; padding:15px; background:#222; color:white; margin-top:20px; }
+    body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; background:#f4f4f4; }
+
+    header {
+      background: linear-gradient(135deg, #2c2c2c, #444);
+      color:white;
+      padding:30px 20px;
+      text-align:center;
+    }
+
+    header h1 { margin:0; font-size:28px; }
+    header p { margin:5px 0 10px; color:#ccc; }
+
+    .info {
+      font-size:14px;
+      color:#eee;
+      line-height:1.6;
+    }
+
+    .container { padding:20px; max-width:1100px; margin:auto; }
+
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+      margin-bottom:30px;
+    }
+
+    .card {
+      background:white;
+      border-radius:14px;
+      padding:15px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    .card h3 {
+      margin:12px 0 6px;
+      font-size:18px;
+    }
+
+    .card p {
+      margin:4px 0;
+      color:#555;
+      font-size:14px;
+    }
+
+    .btn {
+      display:block;
+      text-align:center;
+      background:#ff6600;
+      color:white;
+      padding:10px;
+      border-radius:8px;
+      text-decoration:none;
+      margin-top:12px;
+      font-weight:bold;
+    }
+
+    .btn:hover {
+      background:#e65c00;
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#222;
+      color:white;
+      margin-top:30px;
+      font-size:14px;
+    }
+
   </style>
 </head>
 <body>
 
 <header>
   <h1>Barraca Ellauri</h1>
-  <p>Todo para tu obra en Montevideo</p>
+  <p>Atención las 24 horas, precios accesibles y entregas en el día</p>
+  <div class="info">
+    📍 Zona Piedras Blancas<br>
+    🚚 Entregas: 08 a 17 hs<br>
+    💬 Respondemos mensajes las 24 hs
+  </div>
 </header>
 
 <div class="container">
-  <h2>Productos</h2>
+
   <div class="grid">
 
     <div class="card">
       <img src="https://via.placeholder.com/300x160" alt="Arena">
-      <h3>Arena terciada fina</h3>
-      <p>Suelta o en bolsa</p>
-      <a class="btn" href="https://wa.me/59897124015?text=Hola%20quiero%20consultar%20por%20Arena%20fina">Consultar</a>
+      <h3>Arena</h3>
+      <p>Arena suelta o en bolsa</p>
+      <p>m³ en bolsa: $1700</p>
+      <a class="btn" href="https://wa.me/59897124015?text=Hola%2C%20quiero%20precio%20de%20arena%20y%20env%C3%ADo">Consultar</a>
     </div>
 
     <div class="card">
       <img src="https://via.placeholder.com/300x160" alt="Portland">
-      <h3>Portland 25kg</h3>
-      <p>Cemento "Artigas" de alta resistencia</p>
-      <a class="btn" href="https://wa.me/59897124015?text=Hola%20quiero%20consultar%20por%20Portland">Consultar</a>
+      <h3>Portland</h3>
+      <p>Cemento de alta calidad</p>
+      <a class="btn" href="https://wa.me/59897124015?text=Hola%2C%20quiero%20precio%20de%20portland%20y%20env%C3%ADo">Consultar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160" alt="Pedregullo">
+      <h3>Pedregullo</h3>
+      <p>Excelente calidad</p>
+      <p>Suelto o en bolsa</p>
+      <a class="btn" href="https://wa.me/59897124015?text=Hola%2C%20quiero%20precio%20de%20pedregullo%20y%20env%C3%ADo">Consultar</a>
     </div>
 
   </div>
-  <div class="card">
-  <img src="https://via.placeholder.com/300x160" alt="Arena gruesa">
-  <h3>Bloques</h3>
-  <p>Fuertes y parejos</p>
-  <p>A retirar: $21</p> 
-  <a class="btn" href="https://wa.me/59897124015?text=Hola%20quiero%20consultar%20por%20Arena%20gruesa">Consultar</a>
-</div>
-</div>
-  <div class="card">
-  <img src="https://via.placeholder.com/300x160" alt="Varillas">
-  <h3>Varillas</h3>
-  <p>Medidas disponibles: 6mm, 8mm y 10mm</p>
-  <a class="btn" href="https://wa.me/59897124015?text=Hola%20quiero%20consultar%20por%20varillas">Consultar</a>
-  <div class="card">
-  <img src="https://via.placeholder.com/300x160" alt="Pedregullo">
-  <h3>Pedregullo</h3>
-  <p>Excelente calidad</p>
-  <p>Suelto o en bolsa</p>
-  <a class="btn" href="https://wa.me/59897124015?text=Hola%20quiero%20consultar%20por%20pedregullo">Consultar</a>
-</div>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160" alt="Bloques">
+      <h3>Bloques</h3>
+      <p>Bloques fuertes y parejos</p>
+      <p>A retirar: $21</p>
+      <a class="btn" href="https://wa.me/59897124015?text=Hola%2C%20quiero%20precio%20de%20bloques%20y%20env%C3%ADo">Consultar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160" alt="Varillas">
+      <h3>Varillas</h3>
+      <p>Medidas: 6mm, 8mm y 10mm</p>
+      <a class="btn" href="https://wa.me/59897124015?text=Hola%2C%20quiero%20precio%20de%20varillas%20y%20env%C3%ADo">Consultar</a>
+    </div>
+
+  </div>
+
 </div>
 
 <footer>
-  <p>© 2026 Barraca Ellauri - Envíos en Montevideo</p>
+  <p>© 2026 Barraca Ellauri - Montevideo</p>
 </footer>
 
 </body>
